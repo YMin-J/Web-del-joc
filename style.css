@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+main {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(fondo.png) center fixed no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titulo {
+  font-size: 20vmin;
+  height: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: screen;
+}
+.titulo.invert span {
+  color: black;
+}
+.titulo.invert span::before {
+  -webkit-text-stroke: 0.1em var(--color);
+}
+.titulo span {
+  --color: #ffe055;
+  font-family: Impact, "Anton", Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  display: block;
+  position: absolute;
+  color: var(--color);
+  letter-spacing: 0.02em;
+}
+.titulo span::before, .titulo span::after {
+  content: attr(data-text);
+  display: block;
+  position: relative;
+  padding: 0 0.1em;
+  z-index: 1;
+}
+.titulo span::before {
+  position: absolute;
+  -webkit-text-stroke: 0.1em rgb(0, 0, 0);
+  z-index: 0;
+}
+.titulo span:first-child {
+  transform: translate(-0.255em, -0.4em);
+}
+.titulo span:last-child {
+  --color: #3586ff;
+  transform: translate(0.255em, 0.25em);
+}
+.aparecer {
+  animation-duration: 1.5s;
+  animation-name: animate-fade;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.titulo.aparecer {
+  animation-duration: 1.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+.bajando {
+  color: white; 
+  font-family: monaco, Consolas, "Lucida Console", monospace;  
+  font-size: x-large;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin: auto;
+}
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}

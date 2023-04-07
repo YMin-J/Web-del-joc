@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            Pàgina web del videojoc
+        </title>
+        <style>
+            body {
+                margin: 0;
+            }
+            p { 
+                color: white; 
+                font-family: monaco, Consolas, "Lucida Console", monospace; 
+                text-align: center; 
+                font-size: x-large;
+            }
+            .img-izq {
+                max-width: 50%;
+                float: left;
+                vertical-align: middle;
+            }
+            .img-der {
+                max-width: 50%;
+                float: right;
+                vertical-align: middle;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+    <body>
+        <main>
+            <h1 class="titulo aparecer">
+                <span data-text="University"></span>
+                <span data-text="Path"></span>
+            </h1>
+            <p class="aparecer">Joc de plataformes 2D amb 3 nivells, creat en Unity.</p>
+        </main>
+        <main>
+            <div class="bajando" data-aos="fade-up" data-aos-duration="1500">
+                <img src="1.png" 
+                class="img-izq">
+                <span style="text-align: center;">Surt de la teva casa i barallat amb els monstres!</span>
+            </div>
+        </main>
+        <main>
+            <div class="bajando" data-aos="fade-up" data-aos-duration="1500">
+                <span style="text-align: center;">Els professors t'ajudaran!</span>
+                <img src="2.png" 
+                class="img-der">
+            </div>
+        </main>
+        <main>
+            <div class="bajando" data-aos="fade-up" data-aos-duration="1500">
+                <img src="3.png" 
+                class="img-izq">
+                <span style="text-align: center;">Coneix a gent del tecnològic!</span>
+            </div>
+        </main>
+        <main>
+            <div class="bajando" data-aos="fade-up" data-aos-duration="1500">
+                <span style="text-align: center;">Tres nivells diferents, tres caps finals!<br>La dificultat augmentarà quant més avancis!</span>
+                <img src="4.png" 
+                class="img-der">
+            </div>
+        </main>
+        <main>
+            <div class="bajando" data-aos="fade-up" data-aos-duration="1500">
+                <img src="5.png" 
+                class="img-izq">
+                <span style="text-align: center;">Aconsegueix tots els trofeus i descobreix tots els secrets!</span>
+            </div>
+            <button class="button-28" role="button" onclick="window.location.href='juego.html';">JUGAR</button>
+        </main>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+    </body>
+</html>
